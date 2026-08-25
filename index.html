@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ===== METADATOS ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio de Kaleth Garcia, aprendiz de ADSO en el SENA.">
+  <meta name="author" content="Kaleth Garcia">
+  <title>Portafolio — Kaleth Garcia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- ===== ENCABEZADO SEMÁNTICO ===== -->
+  <header class="main-header">
+    <div class="header-container">
+      
+      <!-- Brand/Logo -->
+      <div class="header-brand">
+        <a href="#" class="logo">Kaleth Garcia</a>
+        <span class="sub-logo">ADSO — SENA</span>
+      </div>
+
+      <!-- Control de menú para celular sin JS -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+      <!-- Botón Hamburguesa -->
+      <label for="menu-toggle" class="hamburger-btn" aria-label="Abrir menú">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+
+      <!-- Navegación -->
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#multimedia">Multimedia</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main class="main-content">
+
+    <!-- Sección "Sobre mí" -->
+    <section id="sobre-mi" class="card-section fade-in">
+      <h2><span>👨‍💻</span> Sobre mí</h2>
+      <div class="perfil-container">
+        <figure class="profile-figure">
+          <img src="mi foto.jpeg" alt="Foto de Kaleth Garcia" width="180">
+          <figcaption>Kaleth Garcia 👋</figcaption>
+        </figure>
+        <div class="perfil-info">
+          <!-- Badge de disponibilidad -->
+          <div class="badge-status">
+            <span class="status-dot"></span> Disponible para proyectos
+          </div>
+          <p>
+            Hola, soy aprendiz de desarrollo de software apasionado por la creación de soluciones web e interfaces modernas. 
+            Me enfoco en escribir código <mark>limpio, accesible y semántico</mark>, construyendo experiencias digitales funcionales e intuitivas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección "Proyectos" -->
+    <section id="proyectos" class="card-section fade-in">
+      <h2><span>🚀</span> Proyectos Destacados</h2>
+
+      <div class="proyectos-grid">
+        <article class="project-card">
+          <div>
+            <h3>LigaSport</h3>
+            <p>Plataforma para la gestión y organización eficiente de ligas deportivas.</p>
+          </div>
+          <details>
+            <summary>Ver más detalles</summary>
+            <p>Incluye módulos de registro de equipos, programación de partidos y seguimiento de estadísticas en tiempo real.</p>
+          </details>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <h3>Sitio Turístico de Santander</h3>
+            <p>Página web promocional destacando destinos emblemáticos como Topocoro.</p>
+          </div>
+          <details>
+            <summary>Ver más detalles</summary>
+            <p>Diseño maquetado en HTML5 y CSS3 nativo, totalmente adaptativo y gestionado en GitHub.</p>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección "Multimedia" -->
+    <section id="multimedia" class="card-section fade-in">
+      <h2><span>🎬</span> Muestra Multimedia</h2>
+      <div class="media-container">
+        <div class="video-wrapper">
+          <iframe
+            class="media-element"
+            src="https://www.youtube.com/embed/3iIwB0oK8SA?si=2NXJI-BLZ9eFmUs9"
+            title="Video de muestra"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="audio-block">
+          <audio
+            src="kalimba.mp3"
+            preload="metadata"
+            controls
+            class="media-element audio-element">
+            Tu navegador no soporta audio.
+          </audio>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección "Habilidades" -->
+    <section id="habilidades" class="card-section fade-in">
+      <h2><span>⚡</span> Habilidades Técnicas</h2>
+      <ul class="skills-container">
+        <li class="skill-pill"><span>🌐</span> HTML5 Semántico</li>
+        <li class="skill-pill"><span>🎨</span> CSS3 / Flexbox & Grid</li>
+        <li class="skill-pill"><span>📜</span> JavaScript (ES6+)</li>
+        <li class="skill-pill"><span>🐘</span> PHP & SQL</li>
+        <li class="skill-pill"><span>🔀</span> Git & GitHub</li>
+      </ul>
+    </section>
+
+    <!-- Sección "Contacto" -->
+    <section id="contacto" class="card-section fade-in">
+      <h2><span>📬</span> Contacto</h2>
+      
+      <form class="contact-form">
+        <p>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </p>
+        <p>
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" placeholder="usuario@dominio.com" required>
+        </p>
+        <p>
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </p>
+        <button type="submit" class="btn-primary">Enviar mensaje</button>
+      </form>
+
+      <div class="contact-footer">
+        <p>Mi GitHub: <a href="https://github.com/kaleth951-jpg" target="_blank" rel="noopener noreferrer" class="link-glow">github.com/kaleth951-jpg</a></p>
+
+        <button type="button" class="btn-secondary" onclick="document.getElementById('modal-info').showModal()">Términos de Contacto</button>
+      </div>
+
+      <dialog id="modal-info" class="custom-modal">
+        <h3>Información de Contacto</h3>
+        <p>Un modal nativo en HTML5 se abre fácilmente con JavaScript llamando al método <code>.showModal()</code>.</p>
+        <button type="button" class="btn-primary" onclick="document.getElementById('modal-info').close()">Cerrar</button>
+      </dialog>
+    </section>
+
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer class="main-footer">
+    <hr>
+    <p>© 2026 Kaleth Garcia — Portafolio desarrollado en el programa ADSO SENA.</p>
+  </footer>
+</body>
+</html>
